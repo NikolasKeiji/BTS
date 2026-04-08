@@ -92,7 +92,7 @@ h1.reveal-text {
     overflow: hidden;
     color: rgb(255, 0, 0);
     text-shadow: 0px 0px 16px rgb(255, 0, 0);
-    font-size: clamp(36px, 2.5vw, 64px);
+    font-size: clamp(78px, 2vw, 58px);
     line-height: 0.95;
 }
 
@@ -181,7 +181,11 @@ h1.reveal-text {
     width: 100%;
     display: flex;
 }
-
+.logo1 img,
+.logo2 img{
+    width: 20%;
+    display: flex;
+}
 .logo1 {
     justify-content: flex-end;
     padding-right: 10%;
@@ -223,7 +227,7 @@ h1.reveal-text {
     justify-content: center;
     text-align: center;
     margin-top: 100px;
-   font-size: clamp(18px, 1.2vw, 28px);
+   font-size: clamp(38px, 1.2vw, 58px);
     margin-left: auto;
     margin-right: auto;
     color: beige;
@@ -288,7 +292,7 @@ h1.reveal-text {
 }
 
 .escrita-footer h1 {
-    font-size: clamp(36px, 2.5vw, 64px);
+   font-size: clamp(78px, 2vw, 58px);
     color: rgb(255, 0, 0);
     transform: translateY(-1.5vw);
     text-shadow: 0px 0px 16px rgb(255, 0, 0);
