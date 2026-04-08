@@ -92,7 +92,7 @@ h1.reveal-text {
     overflow: hidden;
     color: rgb(255, 0, 0);
     text-shadow: 0px 0px 16px rgb(255, 0, 0);
-    font-size: clamp(48px, 8vw, 120px);
+    font-size: clamp(42px, 4.5vw, 80px);
     line-height: 0.95;
 }
 
@@ -123,7 +123,7 @@ h1.reveal-text {
     position: relative;
     margin-top: -10vw;
     overflow: hidden;
-    font-size: clamp(12px, 1.3vw, 20px);
+    font-size: clamp(14px, 1vw, 18px);
     line-height: 1.35;
 }
 
@@ -223,7 +223,7 @@ h1.reveal-text {
     justify-content: center;
     text-align: center;
     margin-top: 100px;
-    font-size: clamp(22px, 3.2vw, 50px);
+   font-size: clamp(20px, 1.8vw, 34px);
     margin-left: auto;
     margin-right: auto;
     color: beige;
@@ -283,12 +283,12 @@ h1.reveal-text {
 }
 
 .escrita-footer h3 {
-    font-size: clamp(26px, 4vw, 60px);
+    font-size: clamp(26px, 2.5vw, 48px);
     color: beige;
 }
 
 .escrita-footer h1 {
-    font-size: clamp(38px, 8vw, 120px);
+    font-size: clamp(42px, 4.5vw, 80px);
     color: rgb(255, 0, 0);
     transform: translateY(-1.5vw);
     text-shadow: 0px 0px 16px rgb(255, 0, 0);
