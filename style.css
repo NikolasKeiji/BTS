@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+#hero{
+    background-image: url(Assets/fundo-hero1.webp);
+    width: 100%;
+    height: 100svh;
+    margin-top: 0;
+    font-family: "Poppins";
+}
+
+.hover-image {
+  position: relative;
+  width: 84%;  
+  height: auto;
+  overflow: hidden;
+  cursor: none; 
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  left: 10%;
+  right: 10%;
+  top: 6%;
+}
+
+.img1 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.cursor-trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px) contrast(30);
+}
+
+.trail-dot {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+}
+
+.img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  filter: brightness(1.2)    drop-shadow(0 0 10px red)
+    drop-shadow(0 0 20px red);;
+  transition: clip-path 0.15s ease-out;
+}
+
+h1.reveal-text {  
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: rgb(255, 0, 0);
+  text-shadow: 0px 0px 16px rgb(255, 0, 0);
+  font-size: 120px;;
+}
+
+.reveal-text .block { 
+  position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgb(255, 0, 0);
+     box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 40px rgba(255, 0, 0, 0.8);
+  filter: blur(8px);
+   transform-origin: left; 
+   z-index: 5; 
+   }
+.escrita-hero{
+    z-index: 2;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin-left: 22%;
+    position: relative;
+    transform: translateY(-50px);
+    top: -100px;
+    overflow: hidden;
+    font-size: 20px;
+}
+.text-hero .line-block {
+ display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  max-width: 100%;  
+  vertical-align: top;
+}
+
+.text-hero .block-p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  transform-origin: left;
+  z-index: 5;
+}
+
+
+
+#trailer{
+    width: 100%;
+    height: 200svh;
+    background-image: url(Assets/fundo-meio.webp);
+}   
+
+.logo1 {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-right: 10%;
+   transform: translateY(80px);
+}
+.logo2{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-left: 10%;
+    transform: translateY(140px);
+}
+.video-wrapper {
+  position: relative;      
+  z-index: 2;              
+  width: 80%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  top: 120px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 80px rgba(255, 67, 67, 0.6);
+}
+
+
+.video-wrapper iframe,
+#yt-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+    .escrita-trailer {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateY(180px);
+        font-size: 50px;
+        font-family: poppins;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: beige;
+    }
+.line-block {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.block {
+  position: absolute;
+  inset: 0;
+  background: #111; 
+  z-index: 2;
+}
+.text-section > .line-block:last-of-type .block {
+  background: red;
+}
+    .destaque {
+  color: red;
+}
+
+#musics{
+    width: 100%;
+    height: 100svh;
+    background-image: url(Assets/fundo-footer.webp);
+    position: relative;
+    overflow: visible;
+}
+.escrita-footer{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    top:8%;
+    left:40%;
+    gap:0;
+}
+.escrita-footer h3 {
+  font-size: 60px;
+  color: beige;
+  font-family: poppins;
+}
+.escrita-footer h1 {
+  font-size: 120px;
+  color: rgb(255, 0, 0);
+  font-family: poppins;
+  transform: translateY(-50px);
+  text-shadow: 0px 0px 16px rgb(255, 0, 0);
+}
+.line-block {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.block {
+  position: absolute;
+  inset: 0;
+  background: #111;
+  z-index: 2;
+  pointer-events: none;
+}
+.escrita-footer h1 .block {
+  background: linear-gradient(90deg, #ff0000, #5d0000);
+}
+.cd {
+    position: absolute;
+    top: 60%;              
+    left: 50%;          
+    transform: translate(-12%, -50%); 
+    display: flex;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    transition: all 0.4s ease;
+    z-index: 99999; 
+    pointer-events: auto;
+}
+
+.cd img {
+  transition: transform 0.4s ease;
+  width: 60%;
+
+}
+.disco{
+    position: absolute;
+    left: 20%;
+}
+.cd:hover .capa {
+  transform: translateX(160px);  
+}
+
+.cd:hover .disco {
+  transform: translateX(-50px) ;  
+   animation: girar 4s linear infinite;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.capa{
+    position: absolute;
+    left: 40%;
+    z-index: 99999;
+}
+
+.lista{
+    position: absolute;
+    top: 32%;              
+    left: 22%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    color:rgb(245, 220, 220);
+    gap: 13px;
+}
+.album {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  padding-right: 100px;
+  text-shadow: 0px 0px 16px rgb(255, 0, 0);
+}
+.album1 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding-left: 200px;
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 0px 0px 16px rgb(255, 0, 0);
+}
