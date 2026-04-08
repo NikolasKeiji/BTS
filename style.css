@@ -167,40 +167,46 @@ h1.reveal-text {
     overflow: hidden;
     padding-top: 5vw;
 }
+.trailer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    position: relative;
+}
+
+.logo1,
+.logo2 {
+    width: 100%;
+    display: flex;
+}
 
 .logo1 {
-    display: flex;
     justify-content: flex-end;
     padding-right: 10%;
-    transform: translateY(4vw);
 }
 
-.logo1 img,
-.logo2 img{
-    width: clamp(110px, 14vw, 220px);
-}
-
-.logo2{
-    display: flex;
+.logo2 {
     justify-content: flex-start;
-    padding-left: 10%;
-    transform: translateY(8vw);
+    padding-left: 10%;;
+    margin-top: -4vw;
 }
 
 .video-wrapper {
-    position: relative;      
-    z-index: 2;              
-    width: min(80%, 900px);
+    position: relative;
+    z-index: 2;
+    width: min(70%, 900px);
     aspect-ratio: 16 / 9;
-    cursor: pointer;
-    border-radius: 12px;
-    overflow: hidden;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    top: 2vw;
-    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 80px rgba(255, 67, 67, 0.6);
+    margin-top: 15vh;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8),
+                0 0 80px rgba(255, 67, 67, 0.6);
 }
 
 .video-wrapper iframe,
