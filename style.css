@@ -202,7 +202,7 @@ h1.reveal-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15vh;
+    margin-top: 10vh;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 40px rgba(255, 0, 0, 0.8),
@@ -222,7 +222,7 @@ h1.reveal-text {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transform: translateY(12vw);
+    transform: translateY(4vw);
     font-size: clamp(26px, 3.2vw, 50px);
     margin-left: auto;
     margin-right: auto;
