@@ -3,297 +3,343 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body{
     overflow-x: hidden;
     max-width: 100%;
+    font-family: "Poppins", sans-serif;
+    background: #000;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* =========================
+   HERO
+========================= */
+
 #hero{
-    background-image: url(Assets/fundo-hero1.webp);
+    background-image: url(Assets/fundohero.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 100svh;
+    min-height: 100vh;
     margin-top: 0;
-    font-family: "Poppins";
+    position: relative;
+    padding: 1vw 0 4vw;
 }
 
 .hover-image {
-  position: relative;
-  width: 84%;  
-  height: auto;
-  overflow: hidden;
-  cursor: none; 
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  left: 10%;
-  right: 10%;
-  top: 6%;
+    position: relative;
+    width: min(84%, 1400px);
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1vw;
 }
 
 .img1 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
+
 .cursor-trail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  filter: blur(20px) contrast(30);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    filter: blur(20px) contrast(30);
 }
 
 .trail-dot {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: red;
-  border-radius: 50%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 50%;
 }
 
 .img2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  filter: brightness(1.2)    drop-shadow(0 0 10px red)
-    drop-shadow(0 0 20px red);;
-  transition: clip-path 0.15s ease-out;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    filter: brightness(1.2)
+    drop-shadow(0 0 10px red)
+    drop-shadow(0 0 20px red);
+    transition: clip-path 0.15s ease-out;
 }
 
 h1.reveal-text {  
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  color: rgb(255, 0, 0);
-  text-shadow: 0px 0px 16px rgb(255, 0, 0);
-  font-size: 120px;;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 16px rgb(255, 0, 0);
+    font-size: clamp(54px, 8vw, 120px);
+    line-height: 0.95;
 }
 
 .reveal-text .block { 
-  position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: rgb(255, 0, 0);
-     box-shadow:
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 0, 0);
+    box-shadow:
     0 0 10px rgba(255, 0, 0, 0.6),
     0 0 20px rgba(255, 0, 0, 0.6),
     0 0 40px rgba(255, 0, 0, 0.8);
-  filter: blur(8px);
-   transform-origin: left; 
-   z-index: 5; 
-   }
+    filter: blur(8px);
+    transform-origin: left; 
+    z-index: 5; 
+}
+
 .escrita-hero{
     z-index: 2;
     color: white;
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 60%;
-    margin-left: 22%;
+    width: min(60%, 950px);
+    margin: 0 auto;
     position: relative;
-    transform: translateY(-50px);
-    top: -100px;
+    top: -7vw;
     overflow: hidden;
-    font-size: 20px;
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 1.35;
 }
+
+.text-hero{
+    margin-top: 1.5rem;
+}
+
 .text-hero .line-block {
- display: inline-block;
-  position: relative;
-  overflow: hidden;
-  width: fit-content;
-  max-width: 100%;  
-  vertical-align: top;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    max-width: 100%;  
+    vertical-align: top;
+    margin-bottom: 12px;
 }
 
 .text-hero .block-p {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 0, 0);
-  transform-origin: left;
-  z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    transform-origin: left;
+    z-index: 5;
 }
 
-
+/* =========================
+   TRAILER
+========================= */
 
 #trailer{
     width: 100%;
-    height: 200svh;
-    background-image: url(Assets/fundo-meio.webp);
-}   
+    min-height: 200vh;
+    background-image: url(Assets/fundo-mei.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5vw;
+}
 
 .logo1 {
     display: flex;
-    align-items: end;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 10%;
-   transform: translateY(80px);
-}
-.logo2{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding-left: 10%;
-    transform: translateY(140px);
-}
-.video-wrapper {
-  position: relative;      
-  z-index: 2;              
-  width: 80%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-  cursor: pointer;
-  border-radius: 12px;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin: 0 auto;
-  top: 120px;
-  box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 80px rgba(255, 67, 67, 0.6);
+    transform: translateY(4vw);
 }
 
+.logo1 img,
+.logo2 img{
+    width: clamp(110px, 14vw, 220px);
+}
+
+.logo2{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+    transform: translateY(8vw);
+}
+
+.video-wrapper {
+    position: relative;      
+    z-index: 2;              
+    width: min(80%, 900px);
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    top: 2vw;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 80px rgba(255, 67, 67, 0.6);
+}
 
 .video-wrapper iframe,
 #yt-player {
-  width: 100%;
-  height: 100%;
-  display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
-    .escrita-trailer {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        transform: translateY(180px);
-        font-size: 50px;
-        font-family: poppins;
-        margin-left: 5%;
-        margin-right: 5%;
-        color: beige;
-    }
+
+.escrita-trailer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(12vw);
+    font-size: clamp(26px, 3.2vw, 50px);
+    margin-left: auto;
+    margin-right: auto;
+    color: beige;
+    line-height: 1.25;
+}
+
 .line-block {
-  position: relative;
-  display: block;
-  overflow: hidden;
+    position: relative;
+    display: block;
+    overflow: hidden;
 }
 
 .block {
-  position: absolute;
-  inset: 0;
-  background: #111; 
-  z-index: 2;
+    position: absolute;
+    inset: 0;
+    background: #111; 
+    z-index: 2;
+    pointer-events: none;
 }
+
 .text-section > .line-block:last-of-type .block {
-  background: red;
+    background: red;
 }
-    .destaque {
-  color: red;
+
+.destaque {
+    color: red;
 }
+
+/* =========================
+   MUSICS / FOOTER
+========================= */
 
 #musics{
     width: 100%;
-    height: 100svh;
+    min-height: 100vh;
     background-image: url(Assets/fundo-footer.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
-    overflow: visible;
-}
-.escrita-footer{
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    top:8%;
-    left:40%;
-    gap:0;
-}
-.escrita-footer h3 {
-  font-size: 60px;
-  color: beige;
-  font-family: poppins;
-}
-.escrita-footer h1 {
-  font-size: 120px;
-  color: rgb(255, 0, 0);
-  font-family: poppins;
-  transform: translateY(-50px);
-  text-shadow: 0px 0px 16px rgb(255, 0, 0);
-}
-.line-block {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+    overflow: hidden;
+    padding: 5vw 0;
 }
 
-.block {
-  position: absolute;
-  inset: 0;
-  background: #111;
-  z-index: 2;
-  pointer-events: none;
+.escrita-footer{
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    text-align: center;
+    width: 100%;
 }
+
+.escrita-footer h3 {
+    font-size: clamp(32px, 4vw, 60px);
+    color: beige;
+}
+
+.escrita-footer h1 {
+    font-size: clamp(54px, 8vw, 120px);
+    color: rgb(255, 0, 0);
+    transform: translateY(-1.5vw);
+    text-shadow: 0px 0px 16px rgb(255, 0, 0);
+    line-height: 1;
+}
+
 .escrita-footer h1 .block {
-  background: linear-gradient(90deg, #ff0000, #5d0000);
+    background: linear-gradient(90deg, #ff0000, #5d0000);
 }
+
 .cd {
     position: absolute;
     top: 60%;              
     left: 50%;          
-    transform: translate(-12%, -50%); 
+    transform: translate(-12%, -50%);
     display: flex;
-    height: 300px;
+    height: clamp(180px, 22vw, 300px);
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: min(40%, 520px);
     transition: all 0.4s ease;
-    z-index: 99999; 
+    z-index: 10; 
     pointer-events: auto;
 }
 
 .cd img {
-  transition: transform 0.4s ease;
-  width: 60%;
-
+    transition: transform 0.4s ease;
+    width: 60%;
 }
+
 .disco{
     position: absolute;
     left: 20%;
 }
-.cd:hover .capa {
-  transform: translateX(160px);  
-}
 
-.cd:hover .disco {
-  transform: translateX(-50px) ;  
-   animation: girar 4s linear infinite;
-}
-@keyframes girar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .capa{
     position: absolute;
     left: 40%;
-    z-index: 99999;
+    z-index: 11;
+}
+
+.cd:hover .capa {
+    transform: translateX(clamp(80px, 10vw, 160px));  
+}
+
+.cd:hover .disco {
+    transform: translateX(clamp(-25px, -3vw, -50px));  
+    animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .lista{
@@ -301,27 +347,284 @@ h1.reveal-text {
     top: 32%;              
     left: 22%;
     display: flex;
-    justify-content: center;
-    text-align: left;
-    display: flex;
     flex-direction: column;
-    width: 30%;
-    color:rgb(245, 220, 220);
+    width: min(30%, 480px);
+    color: rgb(245, 220, 220);
     gap: 13px;
 }
-.album {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 24px;
-  padding-right: 100px;
-  text-shadow: 0px 0px 16px rgb(255, 0, 0);
-}
+
+.album,
 .album1 {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding-left: 200px;
-  font-weight: 700;
-  font-size: 24px;
-  text-shadow: 0px 0px 16px rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: clamp(15px, 1.45vw, 24px);
+    text-shadow: 0px 0px 16px rgb(255, 0, 0);
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
+
+.album {
+    padding-right: clamp(0px, 6vw, 100px);
+}
+
+.album1 {
+    padding-left: clamp(40px, 12vw, 200px);
+}
+
+.album:hover,
+.album1:hover{
+    transform: translateX(8px);
+    opacity: 0.85;
+}
+
+/* =========================
+   LAPTOP / NOTEBOOK
+========================= */
+
+@media (max-width: 1280px){
+
+    .escrita-hero{
+        width: min(72%, 900px);
+        top: -2vw;
+    }
+
+    .lista{
+        left: 14%;
+        width: min(36%, 500px);
+    }
+
+    .cd{
+        left: 56%;
+        width: min(42%, 500px);
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px){
+
+    #hero{
+        padding: 40px 0 80px;
+    }
+
+    .hover-image{
+        width: 90%;
+        top: 0;
+    }
+
+    .escrita-hero{
+        width: 86%;
+        top: 20px;
+        font-size: 17px;
+    }
+
+    #trailer{
+        min-height: 200vh;
+        padding-top: 50px;
+    }
+
+    .logo1{
+        padding-right: 8%;
+        transform: translateY(30px);
+    }
+
+    .logo2{
+        padding-left: 8%;
+        transform: translateY(80px);
+    }
+
+    .video-wrapper{
+        width: 88%;
+        top: 50px;
+    }
+
+    .escrita-trailer{
+        transform: translateY(100px);
+        width: 92%;
+    }
+
+    #musics{
+        min-height: 130vh;
+        padding: 60px 20px 80px;
+    }
+
+    .escrita-footer{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 60px;
+    }
+
+    .lista{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        gap: 16px;
+        z-index: 2;
+    }
+
+    .album,
+    .album1{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cd{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: min(70%, 380px);
+        margin: 70px auto 0;
+        height: 240px;
+    }
+
+    .disco{
+        left: 18%;
+    }
+
+    .capa{
+        left: 38%;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    #hero{
+        min-height: auto;
+        padding: 30px 0 60px;
+    }
+
+    .hover-image{
+        width: 94%;
+        cursor: default;
+    }
+
+    .escrita-hero{
+        width: 92%;
+        top: -90px;
+        transform: none;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    h1.reveal-text{
+        font-size: clamp(42px, 12vw, 72px);
+    }
+
+    #trailer{
+        min-height: 125vh;
+       padding: 160px 0 70px;
+    }
+
+    .logo1{
+        justify-content: center;
+        padding: 0;
+        transform: none;
+        margin: 20px 0;
+    }
+    .logo2 img{
+      opacity: 0;
+    }
+    .logo1 img{
+        width: 130px;
+    }
+
+    .video-wrapper{
+        width: 92%;
+        top: 60px;
+    }
+
+    .escrita-trailer{
+        transform: translateY(50px);
+        font-size: clamp(22px, 7vw, 34px);
+        line-height: 1.35;
+        width: 92%;
+    }
+
+   #musics{
+    min-height: auto;
+    padding: 60px 20px 80px;
+}
+
+.escrita-footer{
+    margin-bottom: 40px;
+}
+
+.escrita-footer h1{
+    transform: none;
+}
+
+.cd{
+    width: min(90%, 320px);
+    height: 200px;
+    margin: 40px auto 50px;
+}
+
+.cd img{
+    width: 70%;
+}
+
+.disco{
+    left: 12%;
+}
+
+.capa{
+    left: 32%;
+}
+
+.cd:hover .capa {
+    transform: translateX(70px);  
+}
+
+.cd:hover .disco {
+    transform: translateX(-18px);  
+    animation: girar 4s linear infinite;
+}
+
+.lista{
+    width: 100%;
+    gap: 14px;
+}
+
+.album,
+.album1{
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* =========================
+   MOBILE PEQUENO
+========================= */
+
+@media (max-width: 480px){
+
+    .escrita-hero{
+        font-size: 14px;
+    }
+
+    .escrita-trailer{
+        font-size: 21px;
+    }
+
+    .album,
+    .album1{
+        font-size: 15px;
+    }
+
+    .cd{
+        height: 180px;
+    }
+  }}

@@ -125,7 +125,7 @@ function onYouTubeIframeAPIReady() {
   filter: "blur(2px)",
   scrollTrigger: {
     trigger: "#trailer",
-    start: "top 15%",
+    start: "top 40%",
     endTrigger: "#projetos",
     end: "+=400",
     scrub: 1,
@@ -139,7 +139,7 @@ gsap.from(".logo1",{
   filter: "blur(2px)",
   scrollTrigger: {
     trigger: "#trailer",
-    start: "top 15%",
+    start: "top 30%",
     endTrigger: "#projetos",
     end: "+=400",
     scrub: 1,
@@ -153,7 +153,7 @@ gsap.from(".logo1",{
   filter: "blur(2px)",
   scrollTrigger: {
     trigger: "#trailer",
-    start: "top 15%",
+    start: "top 30%",
     endTrigger: "#projetos",
     end: "+=400",
     scrub: 1,
